@@ -3,10 +3,10 @@
 public class Point2d {
 
     // координата X
-    public double xCoord;
+    private double xCoord;
 
     // координата Y
-    public double yCoord;
+    private double yCoord;
 
     // Конструктор инициализации
     public Point2d(double x, double y) {
