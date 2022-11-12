@@ -203,7 +203,7 @@ public class task3 {
             } while (!isSimple(n));
         return n;
     }
-    
+
     private static boolean isSimple(int n) {
         if (n < 2)
             return false;
