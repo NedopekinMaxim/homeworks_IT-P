@@ -1,3 +1,6 @@
+import java.util.Collection;
+import java.util.HashMap;
+
 /**
  * This class stores the basic state necessary for the A* algorithm to compute a
  * path across a map.  This state includes a collection of "open waypoints" and
@@ -10,6 +13,8 @@ public class AStarState
     /** This is a reference to the map that the A* algorithm is navigating. **/
     private Map2D map;
 
+    private HashMap<Location, Waypoint> openWaypoint = new HashMap<>();
+    private HashMap<Location, Waypoint> closeWaypoint = new HashMap<>();
 
     /**
      * Initialize a new state object for the A* pathfinding algorithm to use.
@@ -33,10 +38,21 @@ public class AStarState
      * with the minimum total cost.  If there are no open waypoints, this method
      * returns <code>null</code>.
      **/
-    public Waypoint getMinOpenWaypoint()
-    {
+    public Waypoint getMinOpenWaypoint() {
         // TODO:  Implement.
-        return null;
+        if (openWaypoint.isEmpty()) {
+            return null;
+        }
+        Collection<Waypoint> arrayList = openWaypoint.values();
+        double min = Double.MAX_VALUE;
+        Waypoint finalWaypoint = null;
+        for (Waypoint waypoint : arrayList) {
+            if (waypoint.getTotalCost() < min) {
+                min = waypoint.getTotalCost();
+                finalWaypoint = waypoint;
+            }
+        }
+        return finalWaypoint;
     }
 
     /**
@@ -50,7 +66,16 @@ public class AStarState
      **/
     public boolean addOpenWaypoint(Waypoint newWP)
     {
-        // TODO:  Implement.
+        Location location = newWP.getLocation();
+        if (openWaypoint.containsKey(location)){
+            Waypoint waypoint = openWaypoint.get(location);
+            if (newWP.getPreviousCost() < waypoint.getPreviousCost()) {
+                openWaypoint.put(location, newWP);
+                return true;
+            }
+            return false;
+        }
+        openWaypoint.put(location, newWP);
         return false;
     }
 
@@ -59,7 +84,7 @@ public class AStarState
     public int numOpenWaypoints()
     {
         // TODO:  Implement.
-        return 0;
+        return openWaypoint.size();
     }
 
 
@@ -70,6 +95,8 @@ public class AStarState
     public void closeWaypoint(Location loc)
     {
         // TODO:  Implement.
+        closeWaypoint.put(loc, openWaypoint.get(loc));
+        openWaypoint.remove(loc);
     }
 
     /**
@@ -79,7 +106,7 @@ public class AStarState
     public boolean isLocationClosed(Location loc)
     {
         // TODO:  Implement.
-        return false;
+        return closeWaypoint.containsKey(loc);
     }
 }
 
