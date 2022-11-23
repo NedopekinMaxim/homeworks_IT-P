@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9aee61e-230d-4d47-8bdb-a8505e1c368d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Lab3/src/AStarApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/src/AStarApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/src/AStarPathfinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/src/AStarPathfinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/src/AStarState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/src/AStarState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/src/JMapCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/src/JMapCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/src/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/src/Map2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/src/Map2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3/src/Waypoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/src/Waypoint.java" afterDir="false" />
-    </list>
+    <list default="true" id="f9aee61e-230d-4d47-8bdb-a8505e1c368d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
