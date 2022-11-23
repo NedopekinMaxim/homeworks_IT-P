@@ -2,12 +2,15 @@
  * This class represents a simple two-dimensional map composed of square cells.
  * Each cell specifies the cost of traversing that cell.
  **/
-public class Map2D
-{
-    /** The width of the map. **/
+public class Map2D {
+    /**
+     * The width of the map.
+     **/
     private int width;
 
-    /** The height of the map. **/
+    /**
+     * The height of the map.
+     **/
     private int height;
 
     /**
@@ -15,18 +18,22 @@ public class Map2D
      **/
     private int[][] cells;
 
-    /** The starting location for performing the A* pathfinding. **/
+    /**
+     * The starting location for performing the A* pathfinding.
+     **/
     private Location start;
 
-    /** The ending location for performing the A* pathfinding. **/
+    /**
+     * The ending location for performing the A* pathfinding.
+     **/
     private Location finish;
 
 
-    /** Creates a new 2D map, with the specified width and height. **/
-    public Map2D(int width, int height)
-    {
-        if (width <= 0 || height <= 0)
-        {
+    /**
+     * Creates a new 2D map, with the specified width and height.
+     **/
+    public Map2D(int width, int height) {
+        if (width <= 0 || height <= 0) {
             throw new IllegalArgumentException(
                     "width and height must be positive values; got " + width +
                             "x" + height);
@@ -48,30 +55,29 @@ public class Map2D
      * within the map's boundaries.  If the coordinates are not within the map
      * then the method throws an <code>IllegalArgumentException</code>.
      **/
-    private void checkCoords(int x, int y)
-    {
-        if (x < 0 || x > width)
-        {
+    private void checkCoords(int x, int y) {
+        if (x < 0 || x > width) {
             throw new IllegalArgumentException("x must be in range [0, " +
                     width + "), got " + x);
         }
 
-        if (y < 0 || y > height)
-        {
+        if (y < 0 || y > height) {
             throw new IllegalArgumentException("y must be in range [0, " +
                     height + "), got " + y);
         }
     }
 
-    /** Returns the width of the map. **/
-    public int getWidth()
-    {
+    /**
+     * Returns the width of the map.
+     **/
+    public int getWidth() {
         return width;
     }
 
-    /** Returns the height of the map. **/
-    public int getHeight()
-    {
+    /**
+     * Returns the height of the map.
+     **/
+    public int getHeight() {
         return height;
     }
 
@@ -79,34 +85,37 @@ public class Map2D
      * Returns true if the specified coordinates are contained within the map
      * area.
      **/
-    public boolean contains(int x, int y)
-    {
+    public boolean contains(int x, int y) {
         return (x >= 0 && x < width && y >= 0 && y < height);
     }
 
 
-    /** Returns true if the location is contained within the map area. **/
-    public boolean contains(Location loc)
-    {
+    /**
+     * Returns true if the location is contained within the map area.
+     **/
+    public boolean contains(Location loc) {
         return contains(loc.xCoord, loc.yCoord);
     }
 
-    /** Returns the stored cost value for the specified cell. **/
-    public int getCellValue(int x, int y)
-    {
+    /**
+     * Returns the stored cost value for the specified cell.
+     **/
+    public int getCellValue(int x, int y) {
         checkCoords(x, y);
         return cells[x][y];
     }
 
-    /** Returns the stored cost value for the specified cell. **/
-    public int getCellValue(Location loc)
-    {
+    /**
+     * Returns the stored cost value for the specified cell.
+     **/
+    public int getCellValue(Location loc) {
         return getCellValue(loc.xCoord, loc.yCoord);
     }
 
-    /** Sets the cost value for the specified cell. **/
-    public void setCellValue(int x, int y, int value)
-    {
+    /**
+     * Sets the cost value for the specified cell.
+     **/
+    public void setCellValue(int x, int y, int value) {
         checkCoords(x, y);
         cells[x][y] = value;
     }
@@ -115,8 +124,7 @@ public class Map2D
      * Returns the starting location for the map.  This is where the generated
      * path will begin from.
      **/
-    public Location getStart()
-    {
+    public Location getStart() {
         return start;
     }
 
@@ -124,8 +132,7 @@ public class Map2D
      * Sets the starting location for the map.  This is where the generated path
      * will begin from.
      **/
-    public void setStart(Location loc)
-    {
+    public void setStart(Location loc) {
         if (loc == null)
             throw new NullPointerException("loc cannot be null");
 
@@ -136,8 +143,7 @@ public class Map2D
      * Returns the ending location for the map.  This is where the generated
      * path will terminate.
      **/
-    public Location getFinish()
-    {
+    public Location getFinish() {
         return finish;
     }
 
@@ -145,8 +151,7 @@ public class Map2D
      * Sets the ending location for the map.  This is where the generated path
      * will terminate.
      **/
-    public void setFinish(Location loc)
-    {
+    public void setFinish(Location loc) {
         if (loc == null)
             throw new NullPointerException("loc cannot be null");
 
