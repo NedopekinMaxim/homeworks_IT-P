@@ -3,9 +3,10 @@
  * algorithm.  Waypoints consist of a location, the previous waypoint in the
  * path, and some cost values used to determine the best path.
  **/
-public class Waypoint
-{
-    /** The location of this waypoint. **/
+public class Waypoint {
+    /**
+     * The location of this waypoint.
+     **/
     Location loc;
 
     /**
@@ -33,34 +34,32 @@ public class Waypoint
      * can optionally be specified, or the reference can be <code>null</code> to
      * indicate that the waypoint is the start of the path.
      **/
-    public Waypoint(Location loc, Waypoint prevWaypoint)
-    {
+    public Waypoint(Location loc, Waypoint prevWaypoint) {
         this.loc = loc;
         this.prevWaypoint = prevWaypoint;
     }
 
-    /** Returns the location of the waypoint. **/
-    public Location getLocation()
-    {
+    /**
+     * Returns the location of the waypoint.
+     **/
+    public Location getLocation() {
         return loc;
     }
-    
+
     /**
      * Returns the previous waypoint in the path, or <code>null</code> if this
      * is the start of the path.
      **/
-    public Waypoint getPrevious()
-    {
+    public Waypoint getPrevious() {
         return prevWaypoint;
     }
-    
+
     /**
      * This mutator allows both the previous cost and the remaining cost to be
      * set in one method call.  Normally these values will be set at the same
      * time anyway.
      **/
-    public void setCosts(float prevCost, float remainingCost)
-    {
+    public void setCosts(float prevCost, float remainingCost) {
         this.prevCost = prevCost;
         this.remainingCost = remainingCost;
     }
@@ -69,8 +68,7 @@ public class Waypoint
      * Returns the actual cost of getting to this point from the starting
      * location, through the series of waypoints in this chain.
      **/
-    public float getPreviousCost()
-    {
+    public float getPreviousCost() {
         return prevCost;
     }
 
@@ -78,8 +76,7 @@ public class Waypoint
      * Returns an estimate of the remaining cost of traveling from this
      * point to the final destination.
      **/
-    public float getRemainingCost()
-    {
+    public float getRemainingCost() {
         return remainingCost;
     }
 
@@ -89,9 +86,7 @@ public class Waypoint
      * the estimate of the remaining cost of traveling from this point to
      * the final destination.
      **/
-    public float getTotalCost()
-    {
+    public float getTotalCost() {
         return prevCost + remainingCost;
     }
 }
-
