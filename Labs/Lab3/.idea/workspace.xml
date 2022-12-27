@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9aee61e-230d-4d47-8bdb-a8505e1c368d" name="Changes" comment="" />
+    <list default="true" id="f9aee61e-230d-4d47-8bdb-a8505e1c368d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab4/Lab4/src/BurningShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/Lab4/src/FractalExplorer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/Lab4/src/FractalGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/Lab4/src/JImageDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/Lab4/src/Mandelbrot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4/Lab4/src/Tricorn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tasks/Task4/Task4/src/Task4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +32,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/maxim/IdeaProjects/homeworks_IT-P/Tasks/Task3/Task3/src/task3.java&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/maxim/IdeaProjects/homeworks_IT-P/Labs/Lab4&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
